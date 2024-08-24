@@ -25,4 +25,3 @@ git clone https://github.com/kannagiakihiro/metro-catalog-crx.git
 2. 検索ボックスに通常検索したい内容を入力し、その後に「コロン」とPDFファイル内で検索したい内容を追加してください。たとえば、以下のように入力してください。
 
 `東京都内 整備道路：環状八号線`
-
