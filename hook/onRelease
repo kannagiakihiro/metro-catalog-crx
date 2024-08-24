@@ -1,0 +1,25 @@
+#!/bin/bash
+. ../meta/env
+
+if [ -d "$ReleaseAvalonServerDIR" ];then
+    . $ReleaseAvalonServerDIR/env
+else
+    
+    [ ! -d ../meta/server ] && echo "Please specify \$ReleaseAvalonServerDIR environment or symlink a server from avalon to /meta/server before release" && exit 1
+    . ../meta/server/env
+fi
+
+[ -z "$ServerRSA" ] && echo "Missing release server RSA information" && exit 1
+
+echo "Release to server" $ServerName
+echo "User" $ServerUser
+ProjectName=$PROJECT_NAME
+path=$RELEASE_PATH/server
+
+# Ensure private key permission
+chmod 600 $ServerRSA
+
+echo "Ensure server folder"
+ssh $ServerUser@$ServerIP -i $ServerRSA "mkdir -p $path"
+rsync -e "ssh -i $ServerRSA" -aPziou --copy-links ./dist/server/* $ServerUser@$ServerIP:$path/ >/dev/null
+

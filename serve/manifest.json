@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Tokyo Data Catalog Extension",
+  "version": "1.0",
+  "description": "Chrome Extension for https://catalog.data.metro.tokyo.lg.jp/",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://www.kensetsu.metro.tokyo.lg.jp/*",
+    "https://catalog.data.metro.tokyo.lg.jp/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://catalog.data.metro.tokyo.lg.jp/*"
+      ],
+      "js": [
+        "pdf.worker.js",
+        "openDataCatelogSite.js"
+      ],
+      "css": [
+        "main.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pdf.worker.mjs"
+      ],
+      "matches": [
+        "https://catalog.data.metro.tokyo.lg.jp/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "resource/image/icon16.png",
+      "48": "resource/image/icon48.png",
+      "128": "resource/image/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "resource/image/icon16.png",
+    "48": "resource/image/icon48.png",
+    "128": "resource/image/icon128.png"
+  }
+}

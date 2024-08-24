@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -f ./init.sh ];then
+    bash ./init.sh
+    exit 0
+fi
+
+yarn
+rm ./serve/main.css
+ln -s ../src/style/main.css ./serve/main.css
+rm ./serve/manifest.json
+ln -s ../src/manifest.json ./serve/manifest.json
+rm ./serve/pdf.worker.js
+ln -s ../src/script/pdf/pdf.worker.js ./serve/pdf.worker.js
+rm ./serve/popup.html
+ln -s ../src/popup.html ./serve/popup.html
+rm ./serve/resource -rf
+ln -s ../src/resource ./serve/resource
+exit 0

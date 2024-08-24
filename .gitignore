@@ -1,0 +1,8 @@
+node_modules
+*.log
+.tsbuildinfo
+*.tar
+*.tar.gz
+dist
+temp
+

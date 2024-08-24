@@ -1,0 +1,20 @@
+.scrollable() {
+    &,
+    &.y {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    &.x {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    &.both {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+}
+
+.scrollable {
+    .scrollable()
+}

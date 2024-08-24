@@ -1,0 +1,12 @@
+name: "ttjh/crx"
+includes:
+  - "./src/script/**/*.ts"
+widget:
+  root: "./src/script/"
+  less: "./src/style/main.less"
+
+config:
+  Local.AppConfig:
+    apiHost: "ttjh.nstal.me"
+knowledge: "Implementer"
+outputDir: "./src/script/gen/"

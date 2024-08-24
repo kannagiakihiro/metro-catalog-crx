@@ -1,0 +1,36 @@
+{
+    "name": "@project/ttjh_crx",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@branch-ts/cli": "1.0.386",
+        "@root-ts/dev": "1.0.106",
+        "@types/node": "^20.12.7",
+        "less-plugin-glob": "^3.0.0",
+        "source-map-support": "^0.5.21",
+        "typescript": "5.2.2",
+        "watchcompile": "^1.1.32",
+        "webpack": "^5.82.0",
+        "webpack-cli": "^5.1.1"
+    },
+    "dependencies": {
+        "@branch-ts/core": "1.0.233",
+        "@branch-ts/cps-consensus": "0.0.118",
+        "@branch-ts/practice-auth3-web": "0.0.407",
+        "@branch-ts/web": "1.0.542",
+        "@project/era_api-sdk": "0.0.157",
+        "@types/chrome": "^0.0.268",
+        "buffer": "^6.0.3",
+        "crypto-browserify": "^3.12.0",
+        "events": "^3.3.0",
+        "leaf-ts": "3.0.104",
+        "pdfjs-dist": "^3.4.120",
+        "stream-browserify": "^3.0.0"
+    }
+}

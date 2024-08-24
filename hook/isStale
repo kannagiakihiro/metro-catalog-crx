@@ -1,0 +1,13 @@
+#!/bin/bash
+reason=$1
+target=$2
+[ -z "$target" ] && target="src"
+[ -z "$reason" ] && reason="any"
+hash=`find "$target" -type f -print0 | sort -z | xargs -0 md5sum | md5sum | cut -d " " -f 1` 
+mkdir -p temp
+
+[ -f "temp/_last_hash.$reason" ] && [ "`cat temp/_last_hash.$reason`" = "$hash" ] && exit 0
+
+echo $hash > temp/_last_hash.$reason
+exit 1
+

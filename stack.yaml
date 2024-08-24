@@ -1,0 +1,7 @@
+name: "ttjh/crx"
+type: "webapp"
+dependencies:
+dev:
+  - builtIn: "branch-cli-watch"
+  - name: "web-pack"
+    cmd: mkdir -p ./serve/static; npx webpack-cli watch
