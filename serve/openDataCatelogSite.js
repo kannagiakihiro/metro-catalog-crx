@@ -46677,7 +46677,6 @@ else {
         }
     });
 }
-console.error("????");
 
 
 /***/ }),
@@ -47268,7 +47267,7 @@ class PreviewButtonEnhancement extends elementEnhancement_1.ElementEnhancement {
             return;
         let button = document.createElement("button");
         button.classList.add("btn", "btn-default", "btn-lg");
-        button.textContent = "プレビュ";
+        button.textContent = "プレビュー";
         this.previewButton = button;
         this.el.prepend(button);
         this.previewButton.addEventListener("click", (e) => {
@@ -47398,7 +47397,7 @@ class DatasetItemEnhancement extends elementEnhancement_1.ElementEnhancement {
         previewContainer.classList.add("dataset-meta-item");
         let title = document.createElement("dt");
         title.classList.add("dataset-meta-item", "dataset-meta-item-title");
-        title.textContent = "プレビュ";
+        title.textContent = "プレビュー";
         let meta = this.get("meta");
         meta.appendChild(title);
         meta.appendChild(previewContainer);
@@ -47423,9 +47422,7 @@ class FormEnhancement extends elementEnhancement_1.ElementEnhancement {
                     this.preview.inlineSearchKeywords = decodeURIComponent(v);
                 }
             });
-            console.error(hash, "enh??");
             this.el.addEventListener("submit", (e) => {
-                console.error("submit???");
                 let currentUrl = new URL(window.location.toString());
                 e.preventDefault(); // Prevent the original form submission
                 const form = e.target;

@@ -83,7 +83,7 @@ export class PreviewButtonEnhancement extends ElementEnhancement {
         if (this.previewButton) return
         let button = document.createElement("button")
         button.classList.add("btn", "btn-default", "btn-lg")
-        button.textContent = "プレビュ"
+        button.textContent = "プレビュー"
         this.previewButton = button
         this.el.prepend(button)
         this.previewButton.addEventListener("click", (e) => {
@@ -211,7 +211,7 @@ export class DatasetItemEnhancement extends ElementEnhancement<{
         previewContainer.classList.add("dataset-meta-item")
         let title = document.createElement("dt")
         title.classList.add("dataset-meta-item", "dataset-meta-item-title")
-        title.textContent = "プレビュ"
+        title.textContent = "プレビュー"
         let meta = this.get("meta")
         meta.appendChild(title)
         meta.appendChild(previewContainer)
@@ -233,9 +233,7 @@ export class FormEnhancement extends ElementEnhancement {
                 this.preview.inlineSearchKeywords = decodeURIComponent(v)
             }
         })
-        console.error(hash, "enh??")
         this.el.addEventListener("submit", (e) => {
-            console.error("submit???")
             let currentUrl = new URL(window.location.toString())
             e.preventDefault(); // Prevent the original form submission
 

@@ -9,7 +9,6 @@ git clone https://github.com/kannagiakihiro/metro-catalog-crx.git
 ```
 
 2. 次に、Chromeのアドレスバーに「chrome://extensions/」を入力してください。
-
 3. 右上角の「デベロッパーモード」を有効にしてください。
 4. パッケージ化されていない拡張機能を読み込む
 5. 左上角の「パッケージ化されていない拡張機能を読み込む」ボタンをクリックしてください。
@@ -19,7 +18,6 @@ git clone https://github.com/kannagiakihiro/metro-catalog-crx.git
 ## 使い方 (How to use)
 
 1. 東京都オーペンデータカタログサイトにアクセスしてください。
-
 `https://catalog.data.metro.tokyo.lg.jp/dataset`
 
 2. 検索ボックスに通常検索したい内容を入力し、その後に「コロン」とPDFファイル内で検索したい内容を追加してください。たとえば、以下のように入力してください。

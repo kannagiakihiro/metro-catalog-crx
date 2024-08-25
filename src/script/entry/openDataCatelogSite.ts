@@ -27,8 +27,4 @@ if (document.readyState === 'complete') {
             main()
         }
     });
-
 }
-
-
-console.error("????")
