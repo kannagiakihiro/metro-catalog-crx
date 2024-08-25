@@ -2,11 +2,14 @@
 
 ## インストール (Install)
 
-1. 先ずはこのプロジェクトをクローンしてください。
+1. 先ずはこのプロジェクトをクローンしてください。 
 
 ```bash
 git clone https://github.com/kannagiakihiro/metro-catalog-crx.git
 ```
+
+もしくは下記URLからダウンロード及び解凍する
+https://github.com/kannagiakihiro/metro-catalog-crx/releases/tag/1.0.0
 
 2. 次に、Chromeのアドレスバーに「chrome://extensions/」を入力してください。
 3. 右上角の「デベロッパーモード」を有効にしてください。
